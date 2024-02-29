@@ -6,8 +6,10 @@ public class JunitTest1 {
 
    @BeforeAll
    static void beforAll(){
+
        System.out.println("it`s a 0 method");
    }
+
 
     @BeforeEach
     void beforEach(){
