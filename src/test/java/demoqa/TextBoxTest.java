@@ -3,7 +3,6 @@ package demoqa;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
@@ -13,12 +12,13 @@ import static com.codeborne.selenide.Selenide.open;
 public class TextBoxTest {
     @BeforeAll
     static void beforAll(){
-        System.out.println("it`s a 0 method");
         Configuration.browserSize = "1920x1080";
+        Configuration.baseUrl =  "https://demoqa.com";
     }
 
     @Test
     void fillFormTest(){
+        String userName = "Ivan";
 
         open("https://demoqa.com/text-box");
         $ (".text-center").shouldHave(text("Text Box"));
